@@ -1,6 +1,6 @@
 # Sudoku
 
-Sudoku game in Python
+Sudoku game in Python with step-by-step solution using a backtracking algorithm
 
 ## Getting Started
 
