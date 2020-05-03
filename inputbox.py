@@ -55,9 +55,9 @@ class InputBox:
                     else:
                         text = None
                     
-                    # Return (value, x_pos, y_pos)
+                    # Return (value, y_pos, x_pos)
                     if text is not None:
-                        return (text, self.rect.x - self.border, self.rect.y - self.border)
+                        return (text, self.rect.y - self.border, self.rect.x - self.border)
 
         return (None, None, None)
 

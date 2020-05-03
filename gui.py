@@ -58,6 +58,8 @@ class GUI:
 	# Run the game
 	def run(self):
 
+		clock = pygame.time.Clock()
+
 		# Draw all input boxes on screen
 		for inputbox in self.board:
 			inputbox.draw(self.screen)
@@ -83,6 +85,8 @@ class GUI:
 
 			# Update sreen
 			pygame.display.update()
+
+			clock.tick(50)
 
 	# Solve the game using backtracking
 	def solve(self):
@@ -122,11 +126,11 @@ class GUI:
 
 			if n is not None and x is not None and y is not None:
 
-				# Update value of sudoku board 
-				self.sudoku.update(int(n), x // 100, y // 100)
-
 				# Update value of input box setting color
 				inputbox.update(self.sudoku.check(int(n), x // 100, y // 100))
+
+				# Update value of sudoku board 
+				self.sudoku.update(int(n), x // 100, y // 100)
 
 			# Draw input box
 			inputbox.draw(self.screen)

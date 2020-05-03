@@ -51,6 +51,8 @@ class Sudoku:
 	# Check if all rules are True
 	def check(self, value, x, y):
 
+		print('')
+
 		if self.check_row(value, x, y):
 			if self.check_column(value, x, y):
 				if self.check_square(value, x, y):
